@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/proyectos?serverTimezone=UTC</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">root</property>
+        <property name="hbm2ddl.auto">validate</property>
+        <property name="hibernate.dialect.storage_engine">innodb</property>
+        <property name="hibernate.show_sql">true</property>
+
+        <mapping class="org.example.modelos.Proyecto"/>
+        <mapping class="org.example.modelos.EmpleadoProyecto"/>
+        <mapping class="org.example.modelos.Empleado"/>
+        <mapping class="org.example.modelos.DatosProfesionales"/>
+    </session-factory>
+</hibernate-configuration>
